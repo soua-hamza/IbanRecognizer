@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20B20730DD9FEA79E9E8F4F7 /* Pods_IbanRecognizerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A31180EE86C3DF78D486A32 /* Pods_IbanRecognizerTests.framework */; };
+		3283ABDBC08150CE44C7FA24 /* Pods_IbanRecognizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D0D04C6282B9249F32460B /* Pods_IbanRecognizer.framework */; };
 		38C8AB092CE52C2F000EB4FA /* IbanRecognizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB082CE52C2F000EB4FA /* IbanRecognizerApp.swift */; };
 		38C8AB0B2CE52C2F000EB4FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB0A2CE52C2F000EB4FA /* ContentView.swift */; };
 		38C8AB0D2CE52C31000EB4FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C8AB0C2CE52C31000EB4FA /* Assets.xcassets */; };
@@ -14,6 +16,14 @@
 		38C8AB1A2CE52C31000EB4FA /* IbanRecognizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB192CE52C31000EB4FA /* IbanRecognizerTests.swift */; };
 		38C8AB242CE52C32000EB4FA /* IbanRecognizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB232CE52C32000EB4FA /* IbanRecognizerUITests.swift */; };
 		38C8AB262CE52C32000EB4FA /* IbanRecognizerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB252CE52C32000EB4FA /* IbanRecognizerUITestsLaunchTests.swift */; };
+		38C8AB372CE56080000EB4FA /* TransactionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB352CE55F28000EB4FA /* TransactionContentView.swift */; };
+		38C8AB3B2CE56793000EB4FA /* GhostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB3A2CE56793000EB4FA /* GhostView.swift */; };
+		38C8AB3D2CE56A92000EB4FA /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB3C2CE56A92000EB4FA /* UnderlinedTextField.swift */; };
+		38C8AB412CE570A7000EB4FA /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB402CE570A7000EB4FA /* ScannerView.swift */; };
+		38C8AB512CE57D6F000EB4FA /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 38C8AB502CE57D6F000EB4FA /* swiftgen.yml */; };
+		38C8AB5F2CE584E9000EB4FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38C8AB5D2CE584E9000EB4FA /* Localizable.strings */; };
+		38C8AB612CE5865A000EB4FA /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB602CE5865A000EB4FA /* Strings+Generated.swift */; };
+		A7E3607D5451BF57C8C9567D /* Pods_IbanRecognizer_IbanRecognizerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCD10E68A847581522EF8A0 /* Pods_IbanRecognizer_IbanRecognizerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CD3F37E58725E6B0053420C /* Pods-IbanRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizer.release.xcconfig"; path = "Target Support Files/Pods-IbanRecognizer/Pods-IbanRecognizer.release.xcconfig"; sourceTree = "<group>"; };
 		38C8AB052CE52C2F000EB4FA /* IbanRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbanRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C8AB082CE52C2F000EB4FA /* IbanRecognizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbanRecognizerApp.swift; sourceTree = "<group>"; };
 		38C8AB0A2CE52C2F000EB4FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +55,21 @@
 		38C8AB1F2CE52C32000EB4FA /* IbanRecognizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IbanRecognizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C8AB232CE52C32000EB4FA /* IbanRecognizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbanRecognizerUITests.swift; sourceTree = "<group>"; };
 		38C8AB252CE52C32000EB4FA /* IbanRecognizerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbanRecognizerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38C8AB352CE55F28000EB4FA /* TransactionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionContentView.swift; sourceTree = "<group>"; };
+		38C8AB3A2CE56793000EB4FA /* GhostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostView.swift; sourceTree = "<group>"; };
+		38C8AB3C2CE56A92000EB4FA /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		38C8AB402CE570A7000EB4FA /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		38C8AB502CE57D6F000EB4FA /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		38C8AB5E2CE584E9000EB4FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38C8AB602CE5865A000EB4FA /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		5A31180EE86C3DF78D486A32 /* Pods_IbanRecognizerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IbanRecognizerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CD94295C49CFC8BEECBE590 /* Pods-IbanRecognizer-IbanRecognizerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizer-IbanRecognizerUITests.debug.xcconfig"; path = "Target Support Files/Pods-IbanRecognizer-IbanRecognizerUITests/Pods-IbanRecognizer-IbanRecognizerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6AF2D1DBA9B3329A793A9FF6 /* Pods-IbanRecognizerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizerTests.debug.xcconfig"; path = "Target Support Files/Pods-IbanRecognizerTests/Pods-IbanRecognizerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74D0D04C6282B9249F32460B /* Pods_IbanRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IbanRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F10EE3A7FE769DC587BCA5 /* Pods-IbanRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizer.debug.xcconfig"; path = "Target Support Files/Pods-IbanRecognizer/Pods-IbanRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
+		A044186BD53B347AE9BD222C /* Pods-IbanRecognizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizerTests.release.xcconfig"; path = "Target Support Files/Pods-IbanRecognizerTests/Pods-IbanRecognizerTests.release.xcconfig"; sourceTree = "<group>"; };
+		ACD7EFA825B33141F1154693 /* Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig"; path = "Target Support Files/Pods-IbanRecognizer-IbanRecognizerUITests/Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BFCD10E68A847581522EF8A0 /* Pods_IbanRecognizer_IbanRecognizerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IbanRecognizer_IbanRecognizerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3283ABDBC08150CE44C7FA24 /* Pods_IbanRecognizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B20730DD9FEA79E9E8F4F7 /* Pods_IbanRecognizerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E3607D5451BF57C8C9567D /* Pods_IbanRecognizer_IbanRecognizerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +103,14 @@
 		38C8AAFC2CE52C2F000EB4FA = {
 			isa = PBXGroup;
 			children = (
+				38C8AB5D2CE584E9000EB4FA /* Localizable.strings */,
+				38C8AB502CE57D6F000EB4FA /* swiftgen.yml */,
 				38C8AB072CE52C2F000EB4FA /* IbanRecognizer */,
 				38C8AB182CE52C31000EB4FA /* IbanRecognizerTests */,
 				38C8AB222CE52C32000EB4FA /* IbanRecognizerUITests */,
 				38C8AB062CE52C2F000EB4FA /* Products */,
+				E10FC7BCCC07558A9438B68F /* Pods */,
+				D55D306B893A31E9677A073E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +127,9 @@
 		38C8AB072CE52C2F000EB4FA /* IbanRecognizer */ = {
 			isa = PBXGroup;
 			children = (
+				38C8AB522CE57DC7000EB4FA /* Generated */,
+				38C8AB382CE560A0000EB4FA /* Views */,
 				38C8AB082CE52C2F000EB4FA /* IbanRecognizerApp.swift */,
-				38C8AB0A2CE52C2F000EB4FA /* ContentView.swift */,
 				38C8AB0C2CE52C31000EB4FA /* Assets.xcassets */,
 				38C8AB0E2CE52C31000EB4FA /* Preview Content */,
 			);
@@ -127,6 +161,73 @@
 			path = IbanRecognizerUITests;
 			sourceTree = "<group>";
 		};
+		38C8AB382CE560A0000EB4FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38C8AB3F2CE5708D000EB4FA /* ScannerView */,
+				38C8AB3E2CE57078000EB4FA /* TransactionView */,
+				38C8AB392CE565AA000EB4FA /* Common */,
+				38C8AB0A2CE52C2F000EB4FA /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38C8AB392CE565AA000EB4FA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				38C8AB3A2CE56793000EB4FA /* GhostView.swift */,
+				38C8AB3C2CE56A92000EB4FA /* UnderlinedTextField.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		38C8AB3E2CE57078000EB4FA /* TransactionView */ = {
+			isa = PBXGroup;
+			children = (
+				38C8AB352CE55F28000EB4FA /* TransactionContentView.swift */,
+			);
+			path = TransactionView;
+			sourceTree = "<group>";
+		};
+		38C8AB3F2CE5708D000EB4FA /* ScannerView */ = {
+			isa = PBXGroup;
+			children = (
+				38C8AB402CE570A7000EB4FA /* ScannerView.swift */,
+			);
+			path = ScannerView;
+			sourceTree = "<group>";
+		};
+		38C8AB522CE57DC7000EB4FA /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				38C8AB602CE5865A000EB4FA /* Strings+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		D55D306B893A31E9677A073E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74D0D04C6282B9249F32460B /* Pods_IbanRecognizer.framework */,
+				BFCD10E68A847581522EF8A0 /* Pods_IbanRecognizer_IbanRecognizerUITests.framework */,
+				5A31180EE86C3DF78D486A32 /* Pods_IbanRecognizerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E10FC7BCCC07558A9438B68F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96F10EE3A7FE769DC587BCA5 /* Pods-IbanRecognizer.debug.xcconfig */,
+				2CD3F37E58725E6B0053420C /* Pods-IbanRecognizer.release.xcconfig */,
+				5CD94295C49CFC8BEECBE590 /* Pods-IbanRecognizer-IbanRecognizerUITests.debug.xcconfig */,
+				ACD7EFA825B33141F1154693 /* Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig */,
+				6AF2D1DBA9B3329A793A9FF6 /* Pods-IbanRecognizerTests.debug.xcconfig */,
+				A044186BD53B347AE9BD222C /* Pods-IbanRecognizerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38C8AB292CE52C32000EB4FA /* Build configuration list for PBXNativeTarget "IbanRecognizer" */;
 			buildPhases = (
+				FF0C74D772A73E66E11DAD51 /* [CP] Check Pods Manifest.lock */,
 				38C8AB012CE52C2F000EB4FA /* Sources */,
 				38C8AB022CE52C2F000EB4FA /* Frameworks */,
 				38C8AB032CE52C2F000EB4FA /* Resources */,
+				38C8AB532CE580C0000EB4FA /* SwiftGen Script */,
 			);
 			buildRules = (
 			);
@@ -151,6 +254,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38C8AB2C2CE52C32000EB4FA /* Build configuration list for PBXNativeTarget "IbanRecognizerTests" */;
 			buildPhases = (
+				2A7E00BCDACB97221C151D39 /* [CP] Check Pods Manifest.lock */,
 				38C8AB112CE52C31000EB4FA /* Sources */,
 				38C8AB122CE52C31000EB4FA /* Frameworks */,
 				38C8AB132CE52C31000EB4FA /* Resources */,
@@ -169,6 +273,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38C8AB2F2CE52C32000EB4FA /* Build configuration list for PBXNativeTarget "IbanRecognizerUITests" */;
 			buildPhases = (
+				84EAD072D3C765F2516FAEA7 /* [CP] Check Pods Manifest.lock */,
 				38C8AB1B2CE52C32000EB4FA /* Sources */,
 				38C8AB1C2CE52C32000EB4FA /* Frameworks */,
 				38C8AB1D2CE52C32000EB4FA /* Resources */,
@@ -232,7 +337,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C8AB102CE52C31000EB4FA /* Preview Assets.xcassets in Resources */,
+				38C8AB5F2CE584E9000EB4FA /* Localizable.strings in Resources */,
 				38C8AB0D2CE52C31000EB4FA /* Assets.xcassets in Resources */,
+				38C8AB512CE57D6F000EB4FA /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,12 +359,104 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A7E00BCDACB97221C151D39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IbanRecognizerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38C8AB532CE580C0000EB4FA /* SwiftGen Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftGen Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
+		84EAD072D3C765F2516FAEA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IbanRecognizer-IbanRecognizerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF0C74D772A73E66E11DAD51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IbanRecognizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38C8AB012CE52C2F000EB4FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C8AB3D2CE56A92000EB4FA /* UnderlinedTextField.swift in Sources */,
 				38C8AB0B2CE52C2F000EB4FA /* ContentView.swift in Sources */,
+				38C8AB372CE56080000EB4FA /* TransactionContentView.swift in Sources */,
+				38C8AB412CE570A7000EB4FA /* ScannerView.swift in Sources */,
+				38C8AB612CE5865A000EB4FA /* Strings+Generated.swift in Sources */,
+				38C8AB3B2CE56793000EB4FA /* GhostView.swift in Sources */,
 				38C8AB092CE52C2F000EB4FA /* IbanRecognizerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,11 +493,23 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		38C8AB5D2CE584E9000EB4FA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38C8AB5E2CE584E9000EB4FA /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		38C8AB272CE52C32000EB4FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -359,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -411,6 +623,7 @@
 		};
 		38C8AB2A2CE52C32000EB4FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96F10EE3A7FE769DC587BCA5 /* Pods-IbanRecognizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -443,6 +656,7 @@
 		};
 		38C8AB2B2CE52C32000EB4FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CD3F37E58725E6B0053420C /* Pods-IbanRecognizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +689,7 @@
 		};
 		38C8AB2D2CE52C32000EB4FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AF2D1DBA9B3329A793A9FF6 /* Pods-IbanRecognizerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -495,6 +710,7 @@
 		};
 		38C8AB2E2CE52C32000EB4FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A044186BD53B347AE9BD222C /* Pods-IbanRecognizerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +731,7 @@
 		};
 		38C8AB302CE52C32000EB4FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CD94295C49CFC8BEECBE590 /* Pods-IbanRecognizer-IbanRecognizerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +750,7 @@
 		};
 		38C8AB312CE52C32000EB4FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACD7EFA825B33141F1154693 /* Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
