@@ -20,7 +20,7 @@ struct TransactionContentView: View {
                 HStack {
                                         
                     NavigationLink {
-                        ScannerView()
+                        ScannerView(scannerViewModel: ScannerViewModel())
                     } label: {
                         GhostView(ImageSystemName: "camera", title: L10n.transactionViewScannerButton)
                     }

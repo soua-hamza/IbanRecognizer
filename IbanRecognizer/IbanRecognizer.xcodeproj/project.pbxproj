@@ -24,6 +24,10 @@
 		38C8AB5F2CE584E9000EB4FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38C8AB5D2CE584E9000EB4FA /* Localizable.strings */; };
 		38C8AB612CE5865A000EB4FA /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB602CE5865A000EB4FA /* Strings+Generated.swift */; };
 		A7E3607D5451BF57C8C9567D /* Pods_IbanRecognizer_IbanRecognizerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCD10E68A847581522EF8A0 /* Pods_IbanRecognizer_IbanRecognizerUITests.framework */; };
+		BBC9E4262CE7A5EE009BF9F4 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E4252CE7A5EE009BF9F4 /* CameraManager.swift */; };
+		BBC9E4292CE7A79E009BF9F4 /* CMSampleBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E4282CE7A79E009BF9F4 /* CMSampleBufferExtension.swift */; };
+		BBC9E42B2CE7A7EE009BF9F4 /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E42A2CE7A7EE009BF9F4 /* CIImageExtension.swift */; };
+		BBC9E42D2CE7ABB0009BF9F4 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E42C2CE7ABB0009BF9F4 /* ScannerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		96F10EE3A7FE769DC587BCA5 /* Pods-IbanRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizer.debug.xcconfig"; path = "Target Support Files/Pods-IbanRecognizer/Pods-IbanRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
 		A044186BD53B347AE9BD222C /* Pods-IbanRecognizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizerTests.release.xcconfig"; path = "Target Support Files/Pods-IbanRecognizerTests/Pods-IbanRecognizerTests.release.xcconfig"; sourceTree = "<group>"; };
 		ACD7EFA825B33141F1154693 /* Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig"; path = "Target Support Files/Pods-IbanRecognizer-IbanRecognizerUITests/Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BBC9E4252CE7A5EE009BF9F4 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		BBC9E4282CE7A79E009BF9F4 /* CMSampleBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSampleBufferExtension.swift; sourceTree = "<group>"; };
+		BBC9E42A2CE7A7EE009BF9F4 /* CIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImageExtension.swift; sourceTree = "<group>"; };
+		BBC9E42C2CE7ABB0009BF9F4 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		BFCD10E68A847581522EF8A0 /* Pods_IbanRecognizer_IbanRecognizerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IbanRecognizer_IbanRecognizerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -127,6 +135,8 @@
 		38C8AB072CE52C2F000EB4FA /* IbanRecognizer */ = {
 			isa = PBXGroup;
 			children = (
+				BBC9E4272CE7A77E009BF9F4 /* Extensions */,
+				BBC9E4242CE7A5BF009BF9F4 /* Managers */,
 				38C8AB522CE57DC7000EB4FA /* Generated */,
 				38C8AB382CE560A0000EB4FA /* Views */,
 				38C8AB082CE52C2F000EB4FA /* IbanRecognizerApp.swift */,
@@ -193,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				38C8AB402CE570A7000EB4FA /* ScannerView.swift */,
+				BBC9E42C2CE7ABB0009BF9F4 /* ScannerViewModel.swift */,
 			);
 			path = ScannerView;
 			sourceTree = "<group>";
@@ -203,6 +214,23 @@
 				38C8AB602CE5865A000EB4FA /* Strings+Generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		BBC9E4242CE7A5BF009BF9F4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BBC9E4252CE7A5EE009BF9F4 /* CameraManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BBC9E4272CE7A77E009BF9F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBC9E4282CE7A79E009BF9F4 /* CMSampleBufferExtension.swift */,
+				BBC9E42A2CE7A7EE009BF9F4 /* CIImageExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D55D306B893A31E9677A073E /* Frameworks */ = {
@@ -296,7 +324,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					38C8AB042CE52C2F000EB4FA = {
 						CreatedOnToolsVersion = 14.2;
@@ -453,9 +481,13 @@
 			files = (
 				38C8AB3D2CE56A92000EB4FA /* UnderlinedTextField.swift in Sources */,
 				38C8AB0B2CE52C2F000EB4FA /* ContentView.swift in Sources */,
+				BBC9E42D2CE7ABB0009BF9F4 /* ScannerViewModel.swift in Sources */,
+				BBC9E4262CE7A5EE009BF9F4 /* CameraManager.swift in Sources */,
 				38C8AB372CE56080000EB4FA /* TransactionContentView.swift in Sources */,
 				38C8AB412CE570A7000EB4FA /* ScannerView.swift in Sources */,
+				BBC9E4292CE7A79E009BF9F4 /* CMSampleBufferExtension.swift in Sources */,
 				38C8AB612CE5865A000EB4FA /* Strings+Generated.swift in Sources */,
+				BBC9E42B2CE7A7EE009BF9F4 /* CIImageExtension.swift in Sources */,
 				38C8AB3B2CE56793000EB4FA /* GhostView.swift in Sources */,
 				38C8AB092CE52C2F000EB4FA /* IbanRecognizerApp.swift in Sources */,
 			);
@@ -509,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -570,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -634,10 +668,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Pour scanner l'IBAN, nous avons besoin d'accéder à votre caméra.\nVeuillez accepter l'autorisations, cela permet de garantir un moyen rapide et sécurisé de capturer les informations sans saisie manuelle.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -648,6 +684,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -667,10 +704,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Pour scanner l'IBAN, nous avons besoin d'accéder à votre caméra.\nVeuillez accepter l'autorisations, cela permet de garantir un moyen rapide et sécurisé de capturer les informations sans saisie manuelle.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -681,6 +720,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
