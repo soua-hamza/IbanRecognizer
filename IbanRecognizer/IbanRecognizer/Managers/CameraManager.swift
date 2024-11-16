@@ -16,7 +16,7 @@ class CameraManager: NSObject {
     private let captureSession = AVCaptureSession()
     private let systemPreferredCamera = AVCaptureDevice.default(for: .video)
     private var addToPreviewStream: ((CGImage) -> Void)?
-
+    
     override init() {
         super.init()
         Task {
@@ -79,3 +79,4 @@ extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
     }
     
 }
+
