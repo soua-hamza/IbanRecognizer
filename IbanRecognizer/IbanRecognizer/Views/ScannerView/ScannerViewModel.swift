@@ -7,6 +7,8 @@
 
 import AVFoundation
 import Combine
+import Vision
+import UIKit
 
 class ScannerViewModel: ObservableObject {
     
@@ -20,6 +22,8 @@ class ScannerViewModel: ObservableObject {
             })
         }
     }
+    private let operationQueue = OperationQueue()
+    @Published  var recognizedIban: String?
     
     init() { }
         
@@ -27,6 +31,12 @@ class ScannerViewModel: ObservableObject {
         for await image in cameraManager.previewStream {
             Task { @MainActor in
                 currentFrame = image
+                if let cropedFrame = cropedFrame {
+                    
+                    operationQueue.addOperation { [weak self] in
+                        self?.recognizeImageWithTesseract(image: cropedFrame)
+                    }
+                }
             }
         }
     }
@@ -35,5 +45,14 @@ class ScannerViewModel: ObservableObject {
          Task {
             await handleCameraPreviews()
         }
+    }
+    
+}
+
+extension ScannerViewModel {
+    
+    func recognizeImageWithTesseract(image: CGImage) {
+        let text = image.getRecognizedText(recognitionLevel: .accurate)
+        print(text)
     }
 }

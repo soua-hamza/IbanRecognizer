@@ -24,6 +24,7 @@
 		38C8AB5F2CE584E9000EB4FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38C8AB5D2CE584E9000EB4FA /* Localizable.strings */; };
 		38C8AB612CE5865A000EB4FA /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8AB602CE5865A000EB4FA /* Strings+Generated.swift */; };
 		A7E3607D5451BF57C8C9567D /* Pods_IbanRecognizer_IbanRecognizerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCD10E68A847581522EF8A0 /* Pods_IbanRecognizer_IbanRecognizerUITests.framework */; };
+		BB2C51422CE8267B00EF8CAC /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C51412CE8267B00EF8CAC /* UIImageExtension.swift */; };
 		BBC9E4262CE7A5EE009BF9F4 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E4252CE7A5EE009BF9F4 /* CameraManager.swift */; };
 		BBC9E4292CE7A79E009BF9F4 /* CMSampleBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E4282CE7A79E009BF9F4 /* CMSampleBufferExtension.swift */; };
 		BBC9E42B2CE7A7EE009BF9F4 /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E42A2CE7A7EE009BF9F4 /* CIImageExtension.swift */; };
@@ -73,6 +74,8 @@
 		96F10EE3A7FE769DC587BCA5 /* Pods-IbanRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizer.debug.xcconfig"; path = "Target Support Files/Pods-IbanRecognizer/Pods-IbanRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
 		A044186BD53B347AE9BD222C /* Pods-IbanRecognizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizerTests.release.xcconfig"; path = "Target Support Files/Pods-IbanRecognizerTests/Pods-IbanRecognizerTests.release.xcconfig"; sourceTree = "<group>"; };
 		ACD7EFA825B33141F1154693 /* Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig"; path = "Target Support Files/Pods-IbanRecognizer-IbanRecognizerUITests/Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BB2C51392CE8169D00EF8CAC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BB2C51412CE8267B00EF8CAC /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		BBC9E4252CE7A5EE009BF9F4 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		BBC9E4282CE7A79E009BF9F4 /* CMSampleBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSampleBufferExtension.swift; sourceTree = "<group>"; };
 		BBC9E42A2CE7A7EE009BF9F4 /* CIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImageExtension.swift; sourceTree = "<group>"; };
@@ -229,6 +232,7 @@
 			children = (
 				BBC9E4282CE7A79E009BF9F4 /* CMSampleBufferExtension.swift */,
 				BBC9E42A2CE7A7EE009BF9F4 /* CIImageExtension.swift */,
+				BB2C51412CE8267B00EF8CAC /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,6 +240,7 @@
 		D55D306B893A31E9677A073E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB2C51392CE8169D00EF8CAC /* libc++.tbd */,
 				74D0D04C6282B9249F32460B /* Pods_IbanRecognizer.framework */,
 				BFCD10E68A847581522EF8A0 /* Pods_IbanRecognizer_IbanRecognizerUITests.framework */,
 				5A31180EE86C3DF78D486A32 /* Pods_IbanRecognizerTests.framework */,
@@ -490,6 +495,7 @@
 				BBC9E42B2CE7A7EE009BF9F4 /* CIImageExtension.swift in Sources */,
 				38C8AB3B2CE56793000EB4FA /* GhostView.swift in Sources */,
 				38C8AB092CE52C2F000EB4FA /* IbanRecognizerApp.swift in Sources */,
+				BB2C51422CE8267B00EF8CAC /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
