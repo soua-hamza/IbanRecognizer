@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct GhostView: View {
-    var ImageSystemName: String
+    var imageSystemName: String?
     var title: String
     var body: some View {
         HStack {
-            Image(systemName: ImageSystemName)
+            if let imageSystemName = imageSystemName {
+                Image(systemName: imageSystemName)
+            }
             Text(title)
         }.padding(10)
         .foregroundColor(.blue)

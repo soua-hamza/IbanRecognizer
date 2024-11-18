@@ -34,11 +34,19 @@ class CameraManager: NSObject {
     }()
     
     private func configureSession() async {
-
+        
         guard let systemPreferredCamera,
               let deviceInput = try? AVCaptureDeviceInput(device: systemPreferredCamera)
         else { return }
-        
+        if let range = systemPreferredCamera.activeFormat.videoSupportedFrameRateRanges.first {
+            do { try systemPreferredCamera.lockForConfiguration()
+                systemPreferredCamera.activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: Int32(range.minFrameRate))
+                systemPreferredCamera.activeVideoMaxFrameDuration = CMTimeMake(value: 1, timescale: Int32(range.minFrameRate))
+                systemPreferredCamera.unlockForConfiguration()
+            } catch {
+                print("LockForConfiguration failed with error: \(error.localizedDescription)")
+            }
+        }
         captureSession.beginConfiguration()
         
         defer {

@@ -17,26 +17,37 @@ class ScannerViewModel: ObservableObject {
     private var subscription: AnyCancellable?
     @Published var cropedFrame: CGImage? {
         didSet {
-            subscription = cropedFrame.publisher.sink(receiveValue: { image in
-                
+            subscription = cropedFrame.publisher.sink(receiveValue: { [weak self] image in
+                self?.operationQueue.addOperation { [weak self] in
+                    let recognizedTexts = self?.recognizedTexts(image: image)
+                    if let recognizedTexts = recognizedTexts {
+                        Task { @MainActor [weak self] in
+                            self?.recognizedIban = self?.recognizedIBAN(texts: recognizedTexts)
+                        }
+                    }
+                }
             })
         }
     }
     private let operationQueue = OperationQueue()
-    @Published  var recognizedIban: String?
+    @Published  var recognizedIban: String? {
+        didSet {
+            if recognizedIban != nil {
+                operationQueue.cancelAllOperations()
+            }
+        }
+    }
     
-    init() { }
-        
+    @Published  var validatedIban: String = ""
+    
+    init() {
+       
+    }
+    
     func handleCameraPreviews() async {
         for await image in cameraManager.previewStream {
             Task { @MainActor in
                 currentFrame = image
-                if let cropedFrame = cropedFrame {
-                    
-                    operationQueue.addOperation { [weak self] in
-                        self?.recognizeImageWithTesseract(image: cropedFrame)
-                    }
-                }
             }
         }
     }
@@ -51,8 +62,17 @@ class ScannerViewModel: ObservableObject {
 
 extension ScannerViewModel {
     
-    func recognizeImageWithTesseract(image: CGImage) {
-        let text = image.getRecognizedText(recognitionLevel: .accurate)
-        print(text)
+    func recognizedTexts(image: CGImage) -> [String] {
+        let recognizedTexts = image.recognizedTexts(recognitionLevel: .accurate)
+        print(recognizedTexts)
+        return recognizedTexts
     }
 }
+extension ScannerViewModel {
+    func recognizedIBAN(texts: [String]) -> String? {
+        texts.filter {
+            $0.trim().isValidIban()
+        }.first ?? nil
+    }
+}
+

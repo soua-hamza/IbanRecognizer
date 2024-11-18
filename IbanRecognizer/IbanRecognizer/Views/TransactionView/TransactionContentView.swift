@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct TransactionContentView: View {
-    @Binding var iban: String
-
+    @ObservedObject private var scannerViewModel = ScannerViewModel()
     var body: some View {
         NavigationView {
             VStack {
@@ -20,18 +19,18 @@ struct TransactionContentView: View {
                 HStack {
                                         
                     NavigationLink {
-                        ScannerView(scannerViewModel: ScannerViewModel())
+                        ScannerView(scannerViewModel: scannerViewModel)
                     } label: {
-                        GhostView(ImageSystemName: "camera", title: L10n.transactionViewScannerButton)
+                        GhostView(imageSystemName: "camera", title: L10n.transactionViewScannerButton)
                     }
                     
                     Spacer()
                     
-                    GhostView(ImageSystemName: "square.and.arrow.up", title: L10n.transactionViewImportButton)
+                    GhostView(imageSystemName: "square.and.arrow.up", title: L10n.transactionViewImportButton)
                 }.padding(.top, 20)
                     .padding(.bottom, 20)
                 
-                UnderlinedTextField(text: $iban, label: L10n.transactionViewIbanPlaceholder)
+                UnderlinedTextField(text: $scannerViewModel.validatedIban, label: L10n.transactionViewIbanPlaceholder)
                 
                 Spacer()
             }.padding(.leading, 10)
