@@ -22,3 +22,8 @@
 "account_view_text" = "account View";
 "help_view_text" = "help View";
 "more_view_text" = "more View";
+
+"_iban_sheet_view_title" = "L'IBAN du bénéficiaire a été scanné";
+"_iban_sheet_view_validate_title" = "Pensez à le vérifier avant de valider:";
+"_iban_sheet_view_validate" = "Valider";
+"_iban_sheet_view_retry" = "Recommencer";

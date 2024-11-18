@@ -15,7 +15,6 @@ struct TabViewContent: View {
 }
 
 struct ContentView: View {
-    @State var iban: String = ""
     var body: some View {
         TabView {
             TabViewContent(text: L10n.accountViewText)
@@ -24,7 +23,7 @@ struct ContentView: View {
                     Text(L10n.tabViewItem1)
                 }
 
-            TransactionContentView(iban: $iban)
+            TransactionContentView()
                 .tabItem {
                     Image(systemName:"rectangle.portrait.and.arrow.right.fill")
                     Text(L10n.tabViewItem2)

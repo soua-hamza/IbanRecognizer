@@ -10,6 +10,14 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// Recommencer
+  internal static let ibanSheetViewRetry = L10n.tr("Localizable", "_iban_sheet_view_retry", fallback: "Recommencer")
+  /// L'IBAN du bénéficiaire a été scanné
+  internal static let ibanSheetViewTitle = L10n.tr("Localizable", "_iban_sheet_view_title", fallback: "L'IBAN du bénéficiaire a été scanné")
+  /// Valider
+  internal static let ibanSheetViewValidate = L10n.tr("Localizable", "_iban_sheet_view_validate", fallback: "Valider")
+  /// Pensez à le vérifier avant de valider:
+  internal static let ibanSheetViewValidateTitle = L10n.tr("Localizable", "_iban_sheet_view_validate_title", fallback: "Pensez à le vérifier avant de valider:")
   /// Localizable.strings
   ///   IbanRecognizer
   /// 

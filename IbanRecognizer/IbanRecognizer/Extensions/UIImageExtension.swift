@@ -10,7 +10,7 @@ import Vision
 
 extension CGImage {
     
-    func getRecognizedText(recognitionLevel: VNRequestTextRecognitionLevel,
+    func recognizedTexts(recognitionLevel: VNRequestTextRecognitionLevel,
                            minimumTextHeight: Float = 0.03125) -> [String] {
         var recognizedTexts = [String]()
         

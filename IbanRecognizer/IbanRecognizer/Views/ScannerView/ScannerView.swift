@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ScannerView: View {
     @ObservedObject var scannerViewModel: ScannerViewModel
-    @State var currentFrame: UIImage = UIImage()
-    
+    @State private var currentFrame: UIImage = UIImage()
+    @State private var isPresented: Bool = false
+    @Environment(\.dismiss) var dismiss
+
     let mask = CGSize(width: UIScreen.main.bounds.width - 50, height: 60)
     var body: some View {
             ZStack(alignment: .center) {
@@ -38,13 +40,34 @@ struct ScannerView: View {
                                 .frame(width: mask.width, height: mask.height)
                         }
             }
+            .sheet(isPresented: $isPresented, content: {
+                if let recognizedIban = scannerViewModel.recognizedIban {
+                    IBANSheetView(iban: recognizedIban) {
+                        isPresented = false
+                        scannerViewModel.validatedIban = recognizedIban
+                        dismiss()
+                    } retry: {
+                        isPresented = false
+                        scannerViewModel.recognizedIban = nil
+                    }
+                }
+            })
             .onChange(of: scannerViewModel.currentFrame, { oldValue, newValue in
                 if let newValue = newValue {
                     currentFrame = UIImage(cgImage: newValue)
-                    scannerViewModel.cropedFrame = cropImage(inputImage: currentFrame)
+                    if scannerViewModel.recognizedIban == nil {
+                        scannerViewModel.cropedFrame = cropImage(inputImage: currentFrame)
+                    }
+                }
+            })
+            .onChange(of: scannerViewModel.recognizedIban, { oldValue, newValue in
+                if newValue != nil {
+                    isPresented = true
                 }
             })
             .onAppear {
+                scannerViewModel.recognizedIban = nil
+                scannerViewModel.validatedIban = ""
                 scannerViewModel.handleCameraPreviews()
             }
             .navigationTitle(L10n.scannerViewNavigationTitle)
@@ -64,4 +87,3 @@ struct ScannerView: View {
     }
     
 }
-
