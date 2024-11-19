@@ -10,19 +10,17 @@ import AVFoundation
 
 class CameraManager: NSObject {
     private let videoRotationAngle = 90.0
-    private var captureSessionQueue = DispatchQueue(label: "video.session.queue")
-    private var captureDeviceInput: AVCaptureDeviceInput?
-    private var captureVideoOutput: AVCaptureVideoDataOutput?
-    private let captureSession = AVCaptureSession()
-    private let systemPreferredCamera = AVCaptureDevice.default(for: .video)
-    private var addToPreviewStream: ((CGImage) -> Void)?
+    var captureSessionQueue = DispatchQueue(label: "video.session.queue")
+    var captureDeviceInput: AVCaptureDeviceInput?
+    var captureVideoOutput: AVCaptureVideoDataOutput?
+    var captureSession = AVCaptureSession()
+    var systemPreferredCamera = AVCaptureDevice.default(for: .video)
+    var addToPreviewStream: ((CGImage) -> Void)?
     
     override init() {
         super.init()
-        Task {
-            await configureSession()
-            await startSession()
-        }
+        configureSession()
+        startSession()
     }
     
     lazy var previewStream: AsyncStream<CGImage> = {
@@ -33,8 +31,8 @@ class CameraManager: NSObject {
         }
     }()
     
-    private func configureSession() async {
-        
+    private func configureSession() {
+
         guard let systemPreferredCamera,
               let deviceInput = try? AVCaptureDeviceInput(device: systemPreferredCamera)
         else { return }
@@ -71,7 +69,7 @@ class CameraManager: NSObject {
         
     }
     
-    private func startSession() async {
+    private func startSession() {
         captureSession.startRunning()
     }
 }

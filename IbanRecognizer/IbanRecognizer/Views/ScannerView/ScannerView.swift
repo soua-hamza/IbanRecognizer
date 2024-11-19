@@ -66,8 +66,7 @@ struct ScannerView: View {
                 }
             })
             .onAppear {
-                scannerViewModel.recognizedIban = nil
-                scannerViewModel.validatedIban = ""
+                scannerViewModel.resetIban()
                 scannerViewModel.handleCameraPreviews()
             }
             .navigationTitle(L10n.scannerViewNavigationTitle)

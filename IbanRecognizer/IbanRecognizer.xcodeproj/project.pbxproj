@@ -27,7 +27,10 @@
 		BB2C51422CE8267B00EF8CAC /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C51412CE8267B00EF8CAC /* UIImageExtension.swift */; };
 		BB2C51442CEA32BB00EF8CAC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C51432CEA32BB00EF8CAC /* StringExtension.swift */; };
 		BB2C51462CEA581900EF8CAC /* IBANSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C51452CEA581900EF8CAC /* IBANSheetView.swift */; };
-		BBC9E4262CE7A5EE009BF9F4 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E4252CE7A5EE009BF9F4 /* CameraManager.swift */; };
+		BB2C51482CEBBDCB00EF8CAC /* CameraManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C51472CEBBDCB00EF8CAC /* CameraManagerTests.swift */; };
+		BB2C514A2CEBC1BC00EF8CAC /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E4252CE7A5EE009BF9F4 /* CameraManager.swift */; };
+		BB2C51542CECE34000EF8CAC /* ScannerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C51532CECE34000EF8CAC /* ScannerViewTests.swift */; };
+		BB2C51562CECE70100EF8CAC /* ScannerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2C51552CECE70100EF8CAC /* ScannerViewModelTests.swift */; };
 		BBC9E4292CE7A79E009BF9F4 /* CMSampleBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E4282CE7A79E009BF9F4 /* CMSampleBufferExtension.swift */; };
 		BBC9E42B2CE7A7EE009BF9F4 /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E42A2CE7A7EE009BF9F4 /* CIImageExtension.swift */; };
 		BBC9E42D2CE7ABB0009BF9F4 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E42C2CE7ABB0009BF9F4 /* ScannerViewModel.swift */; };
@@ -80,6 +83,9 @@
 		BB2C51412CE8267B00EF8CAC /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		BB2C51432CEA32BB00EF8CAC /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		BB2C51452CEA581900EF8CAC /* IBANSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANSheetView.swift; sourceTree = "<group>"; };
+		BB2C51472CEBBDCB00EF8CAC /* CameraManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManagerTests.swift; sourceTree = "<group>"; };
+		BB2C51532CECE34000EF8CAC /* ScannerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewTests.swift; sourceTree = "<group>"; };
+		BB2C51552CECE70100EF8CAC /* ScannerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModelTests.swift; sourceTree = "<group>"; };
 		BBC9E4252CE7A5EE009BF9F4 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		BBC9E4282CE7A79E009BF9F4 /* CMSampleBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSampleBufferExtension.swift; sourceTree = "<group>"; };
 		BBC9E42A2CE7A7EE009BF9F4 /* CIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImageExtension.swift; sourceTree = "<group>"; };
@@ -165,6 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				38C8AB192CE52C31000EB4FA /* IbanRecognizerTests.swift */,
+				BB2C51472CEBBDCB00EF8CAC /* CameraManagerTests.swift */,
+				BB2C51532CECE34000EF8CAC /* ScannerViewTests.swift */,
+				BB2C51552CECE70100EF8CAC /* ScannerViewModelTests.swift */,
 			);
 			path = IbanRecognizerTests;
 			sourceTree = "<group>";
@@ -493,12 +502,12 @@
 				38C8AB3D2CE56A92000EB4FA /* UnderlinedTextField.swift in Sources */,
 				38C8AB0B2CE52C2F000EB4FA /* ContentView.swift in Sources */,
 				BBC9E42D2CE7ABB0009BF9F4 /* ScannerViewModel.swift in Sources */,
-				BBC9E4262CE7A5EE009BF9F4 /* CameraManager.swift in Sources */,
 				38C8AB372CE56080000EB4FA /* TransactionContentView.swift in Sources */,
 				38C8AB412CE570A7000EB4FA /* ScannerView.swift in Sources */,
 				BB2C51462CEA581900EF8CAC /* IBANSheetView.swift in Sources */,
 				BBC9E4292CE7A79E009BF9F4 /* CMSampleBufferExtension.swift in Sources */,
 				38C8AB612CE5865A000EB4FA /* Strings+Generated.swift in Sources */,
+				BB2C514A2CEBC1BC00EF8CAC /* CameraManager.swift in Sources */,
 				BBC9E42B2CE7A7EE009BF9F4 /* CIImageExtension.swift in Sources */,
 				38C8AB3B2CE56793000EB4FA /* GhostView.swift in Sources */,
 				38C8AB092CE52C2F000EB4FA /* IbanRecognizerApp.swift in Sources */,
@@ -511,7 +520,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2C51482CEBBDCB00EF8CAC /* CameraManagerTests.swift in Sources */,
+				BB2C51542CECE34000EF8CAC /* ScannerViewTests.swift in Sources */,
 				38C8AB1A2CE52C31000EB4FA /* IbanRecognizerTests.swift in Sources */,
+				BB2C51562CECE70100EF8CAC /* ScannerViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,7 +763,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57DE82B8RS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hamza.soua.IbanRecognizerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -772,7 +784,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57DE82B8RS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hamza.soua.IbanRecognizerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -792,6 +804,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57DE82B8RS;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hamza.soua.IbanRecognizerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -811,6 +824,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57DE82B8RS;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hamza.soua.IbanRecognizerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
