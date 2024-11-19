@@ -58,6 +58,11 @@ class ScannerViewModel: ObservableObject {
         }
     }
     
+    func resetIban() {
+        recognizedIban = nil
+        validatedIban = ""
+    }
+    
 }
 
 extension ScannerViewModel {
