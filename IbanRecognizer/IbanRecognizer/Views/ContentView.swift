@@ -15,6 +15,7 @@ struct TabViewContent: View {
 }
 
 struct ContentView: View {
+    @StateObject private var scannerViewModel = ScannerViewModel()
     var body: some View {
         TabView {
             TabViewContent(text: L10n.accountViewText)
@@ -24,6 +25,7 @@ struct ContentView: View {
                 }
 
             TransactionContentView()
+                .environmentObject(scannerViewModel)
                 .tabItem {
                     Image(systemName:"rectangle.portrait.and.arrow.right.fill")
                     Text(L10n.tabViewItem2)

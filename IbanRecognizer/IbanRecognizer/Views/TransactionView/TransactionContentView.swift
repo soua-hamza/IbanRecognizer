@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TransactionContentView: View {
-    @ObservedObject private var scannerViewModel = ScannerViewModel()
+    @EnvironmentObject private var scannerViewModel: ScannerViewModel
     var body: some View {
         NavigationView {
             VStack {
@@ -19,7 +19,8 @@ struct TransactionContentView: View {
                 HStack {
                                         
                     NavigationLink {
-                        ScannerView(scannerViewModel: scannerViewModel)
+                        ScannerView()
+                            .environmentObject(scannerViewModel)
                     } label: {
                         GhostView(imageSystemName: "camera", title: L10n.transactionViewScannerButton)
                     }

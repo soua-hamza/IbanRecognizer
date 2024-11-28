@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScannerView: View {
-    @ObservedObject var scannerViewModel: ScannerViewModel
+    @EnvironmentObject private var scannerViewModel: ScannerViewModel
     @State private var currentFrame: UIImage = UIImage()
     @State private var isPresented: Bool = false
     @Environment(\.dismiss) var dismiss
