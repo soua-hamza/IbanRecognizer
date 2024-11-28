@@ -83,7 +83,7 @@ extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
                        didOutput sampleBuffer: CMSampleBuffer,
                        from connection: AVCaptureConnection) {
         connection.videoRotationAngle = videoRotationAngle
-        guard let currentFrame = sampleBuffer.cgImage else { return }
+        guard let currentFrame = sampleBuffer.toCGImage else { return }
         addToPreviewStream?(currentFrame)
     }
     
