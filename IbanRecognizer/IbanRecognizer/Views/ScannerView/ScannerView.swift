@@ -46,6 +46,7 @@ struct ScannerView: View {
                         isPresented = false
                         scannerViewModel.validatedIban = recognizedIban
                         dismiss()
+                        scannerViewModel.stopCameraPreviews()
                     } retry: {
                         isPresented = false
                         scannerViewModel.recognizedIban = nil

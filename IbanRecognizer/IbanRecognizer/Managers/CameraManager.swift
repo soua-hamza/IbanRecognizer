@@ -20,7 +20,6 @@ class CameraManager: NSObject {
     override init() {
         super.init()
         configureSession()
-        startSession()
     }
     
     lazy var previewStream: AsyncStream<CGImage> = {
@@ -69,7 +68,7 @@ class CameraManager: NSObject {
         
     }
     
-    private func startSession() {
+    func startSession() {
         captureSession.startRunning()
     }
     func stopSession() {

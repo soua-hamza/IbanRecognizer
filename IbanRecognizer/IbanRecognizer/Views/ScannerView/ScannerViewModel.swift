@@ -53,6 +53,7 @@ class ScannerViewModel: ObservableObject {
     }
     
     func handleCameraPreviews() {
+        cameraManager.startSession()
          Task {
             await handleCameraPreviews()
         }
