@@ -17,12 +17,12 @@ struct GhostView: View {
             }
             Text(title)
         }.padding(10)
-        .foregroundColor(.blue)
-        .background(.white)
-        .cornerRadius(25)
+            .foregroundColor(.blue)
+            .background(.white)
+            .cornerRadius(25)
             .overlay(
                 RoundedRectangle(cornerRadius: 25)
                     .stroke(.blue, lineWidth: 1)
-                )
+            )
     }
 }
