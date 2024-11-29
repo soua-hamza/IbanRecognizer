@@ -69,10 +69,14 @@ class CameraManager: NSObject {
     }
     
     func startSession() {
-        captureSession.startRunning()
+        Task {
+            captureSession.startRunning()
+        }
     }
     func stopSession() {
-        captureSession.stopRunning()
+        Task {
+            captureSession.stopRunning()
+        }
     }
 }
 
@@ -87,4 +91,3 @@ extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
     }
     
 }
-

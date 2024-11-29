@@ -14,7 +14,7 @@ final class ScannerViewModelTests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         scannerViewModel = ScannerViewModel()
-        scannerView = ScannerView(scannerViewModel: scannerViewModel)
+        _ = ScannerView().environmentObject(scannerViewModel)
     }
     
     override func tearDownWithError() throws {
@@ -25,7 +25,7 @@ final class ScannerViewModelTests: XCTestCase {
     
     func test_onFrameUpdate_should_update_currentFrame() {
         // Given: A mock CGImage to simulate a camera frame
-        let mockImage = UIImage(named: "screen")!.cgImage!
+        let mockImage = UIImage(resource: .ibanScreen).cgImage!
         
         // When: The camera frame updates
         scannerViewModel.currentFrame = mockImage
@@ -39,12 +39,13 @@ final class ScannerViewModelTests: XCTestCase {
         scannerViewModel.recognizedIban = "FR1420010101150500013M02606"
         
         // When: The recognizedIban changes
-        scannerView.onChange(of: scannerViewModel.recognizedIban, { oldValue, newValue in
+        _ = scannerView.onChange(of: scannerViewModel.recognizedIban, { oldValue, newValue in
             // Simulate that the IBAN sheet is presented when recognizedIban is set
             XCTAssertNotNil(newValue)
             XCTAssertEqual(newValue, "FR1420010101150500013M02606")
         })
     }
+        
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {

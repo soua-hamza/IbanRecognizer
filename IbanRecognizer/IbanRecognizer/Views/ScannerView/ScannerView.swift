@@ -70,6 +70,9 @@ struct ScannerView: View {
                 scannerViewModel.resetIban()
                 scannerViewModel.handleCameraPreviews()
             }
+            .onDisappear(perform: {
+                scannerViewModel.stopCameraPreviews()
+            })
             .navigationTitle(L10n.scannerViewNavigationTitle)
     }
     

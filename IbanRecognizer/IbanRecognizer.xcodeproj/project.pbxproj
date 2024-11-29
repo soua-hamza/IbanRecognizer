@@ -34,6 +34,8 @@
 		BBC9E42D2CE7ABB0009BF9F4 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9E42C2CE7ABB0009BF9F4 /* ScannerViewModel.swift */; };
 		BBF10A3F2CF8F5EC001D8DCE /* TextRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF10A3E2CF8F5EC001D8DCE /* TextRecognitionManager.swift */; };
 		BBF10A472CF90503001D8DCE /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF10A462CF90503001D8DCE /* CIImageExtension.swift */; };
+		BBF10A4B2CF919C9001D8DCE /* TextRecognitionManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF10A4A2CF919C9001D8DCE /* TextRecognitionManagerTests.swift */; };
+		BBF10A4D2CF939C7001D8DCE /* IBANValidatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF10A4C2CF939C6001D8DCE /* IBANValidatorManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		BBC9E42C2CE7ABB0009BF9F4 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		BBF10A3E2CF8F5EC001D8DCE /* TextRecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionManager.swift; sourceTree = "<group>"; };
 		BBF10A462CF90503001D8DCE /* CIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImageExtension.swift; sourceTree = "<group>"; };
+		BBF10A4A2CF919C9001D8DCE /* TextRecognitionManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionManagerTests.swift; sourceTree = "<group>"; };
+		BBF10A4C2CF939C6001D8DCE /* IBANValidatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANValidatorManager.swift; sourceTree = "<group>"; };
 		BFCD10E68A847581522EF8A0 /* Pods_IbanRecognizer_IbanRecognizerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IbanRecognizer_IbanRecognizerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,6 +174,7 @@
 		38C8AB182CE52C31000EB4FA /* IbanRecognizerTests */ = {
 			isa = PBXGroup;
 			children = (
+				BBF10A4A2CF919C9001D8DCE /* TextRecognitionManagerTests.swift */,
 				38C8AB192CE52C31000EB4FA /* IbanRecognizerTests.swift */,
 				BB2C51472CEBBDCB00EF8CAC /* CameraManagerTests.swift */,
 				BB2C51532CECE34000EF8CAC /* ScannerViewTests.swift */,
@@ -236,6 +241,7 @@
 		BBC9E4242CE7A5BF009BF9F4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				BBF10A4C2CF939C6001D8DCE /* IBANValidatorManager.swift */,
 				BBF10A3E2CF8F5EC001D8DCE /* TextRecognitionManager.swift */,
 				BBC9E4252CE7A5EE009BF9F4 /* CameraManager.swift */,
 			);
@@ -510,6 +516,7 @@
 				38C8AB612CE5865A000EB4FA /* Strings+Generated.swift in Sources */,
 				BB2C514A2CEBC1BC00EF8CAC /* CameraManager.swift in Sources */,
 				38C8AB3B2CE56793000EB4FA /* GhostView.swift in Sources */,
+				BBF10A4D2CF939C7001D8DCE /* IBANValidatorManager.swift in Sources */,
 				38C8AB092CE52C2F000EB4FA /* IbanRecognizerApp.swift in Sources */,
 				BB2C51442CEA32BB00EF8CAC /* StringExtension.swift in Sources */,
 				BBF10A3F2CF8F5EC001D8DCE /* TextRecognitionManager.swift in Sources */,
@@ -522,6 +529,7 @@
 			files = (
 				BB2C51482CEBBDCB00EF8CAC /* CameraManagerTests.swift in Sources */,
 				BB2C51542CECE34000EF8CAC /* ScannerViewTests.swift in Sources */,
+				BBF10A4B2CF919C9001D8DCE /* TextRecognitionManagerTests.swift in Sources */,
 				38C8AB1A2CE52C31000EB4FA /* IbanRecognizerTests.swift in Sources */,
 				BB2C51562CECE70100EF8CAC /* ScannerViewModelTests.swift in Sources */,
 			);

@@ -7,7 +7,12 @@
 
 import Foundation
 
-extension String {
+protocol IbanValidation {
+    func isValidIban() -> Bool
+    func trim() -> String
+}
+
+extension String: IbanValidation {
     func isValidIban() -> Bool {
         let regex = "^FR\\d{12}[0-9A-Z]{11}\\d{2}$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)

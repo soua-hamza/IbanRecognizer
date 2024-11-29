@@ -7,12 +7,16 @@
 
 import Vision
 
+protocol TextRecognition {
+    func recognizeText(in image: CGImage) -> [String]
+}
+
 class TextRecognitionManager {
+    private let recognitionLevel: VNRequestTextRecognitionLevel
     private lazy var textRecognitionRequest: VNRecognizeTextRequest = {
         let request = VNRecognizeTextRequest { [weak self] request, error in
             self?.handleRecognitionResults(request: request, error: error)
         }
-        request.recognitionLevel = .accurate
         request.usesLanguageCorrection = true
         return request
     }()
@@ -22,7 +26,8 @@ class TextRecognitionManager {
     private var recognizedTexts: [String] = []
     
     init(recognitionLevel: VNRequestTextRecognitionLevel) {
-        requestHandler = VNSequenceRequestHandler()
+        self.recognitionLevel = recognitionLevel
+        self.requestHandler = VNSequenceRequestHandler()
     }
     
     private func handleRecognitionResults(request: VNRequest, error: Error?) {
@@ -38,9 +43,13 @@ class TextRecognitionManager {
         print("Recognized texts: \(recognizedTexts)")
         recognizedTexts.append(contentsOf: topCandidates)
     }
+        
+}
+
+extension TextRecognitionManager: TextRecognition {
     
     func recognizeText(in cgImage: CGImage) -> [String] {
-
+        
         recognizedTexts.removeAll()
         
         do {
@@ -51,5 +60,4 @@ class TextRecognitionManager {
         
         return recognizedTexts
     }
-    
 }

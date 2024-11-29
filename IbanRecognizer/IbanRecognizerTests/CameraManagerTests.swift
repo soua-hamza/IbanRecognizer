@@ -64,7 +64,8 @@ final class CameraManagerTests: XCTestCase {
         let frameCapturedExpectation = self.expectation(description: "Frame was captured")
         
         //  GIVEN
-        sut  = CameraManager() //configuration and session start are made in the intialization
+        sut  = CameraManager() //configuration are made in the intialization
+        sut.startSession()
         //  THEN
         sut.addToPreviewStream = { cgImage in
             if !frameCaptured {
@@ -74,11 +75,12 @@ final class CameraManagerTests: XCTestCase {
         }
         
         // Wait for the frame capture
-        waitForExpectations(timeout: 10) // Adjust timeout as needed for testing
+        waitForExpectations(timeout: 20) // Adjust timeout as needed for testing
         
         // After waiting, check if the capture session is running
-        XCTAssertTrue(frameCaptured, "frame should be captured after startSession() is called in the initializer.")
-        XCTAssertTrue(sut.captureSession.isRunning, "The capture session should be running after startSession() is called in the initializer.")
+        //WORK ONLY ON DEVICE
+        XCTAssertTrue(frameCaptured, "frame should be captured after startSession() is called")
+        XCTAssertTrue(sut.captureSession.isRunning, "The capture session should be running after startSession() is called")
     }
     
     
@@ -101,14 +103,16 @@ final class CameraManagerTests: XCTestCase {
         let expectation = self.expectation(description: "capture output delegate isCalled")
         
         //  GIVEN
-        sut  = CameraManagerMock() //configuration and session start are called in the intialization
+        sut  = CameraManagerMock() //configuration are made in the intialization
+        sut.startSession()
         
         //  THEN
         
         sut.captureOutputClosure = {
             expectation.fulfill()
         }
-        waitForExpectations(timeout: 10)
+        waitForExpectations(timeout: 20)
+        //WORK ONLY ON DEVICE
         XCTAssertTrue(sut.captureOutputDelegateIsCalled, "capture output delegate isCalled after startSession() is called.")
         
     }
