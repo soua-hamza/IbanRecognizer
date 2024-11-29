@@ -17,22 +17,21 @@ struct TransactionContentView: View {
                     Spacer()
                 }.padding(.top, 20)
                 HStack {
-                                        
                     NavigationLink {
                         ScannerView()
                             .environmentObject(scannerViewModel)
                     } label: {
                         GhostView(imageSystemName: "camera", title: L10n.transactionViewScannerButton)
                     }
-                    
+
                     Spacer()
-                    
+
                     GhostView(imageSystemName: "square.and.arrow.up", title: L10n.transactionViewImportButton)
                 }.padding(.top, 20)
                     .padding(.bottom, 20)
-                
+
                 UnderlinedTextField(text: $scannerViewModel.validatedIban, label: L10n.transactionViewIbanPlaceholder)
-                
+
                 Spacer()
             }.padding(.leading, 10)
                 .padding(.trailing, 10)
@@ -41,4 +40,3 @@ struct TransactionContentView: View {
         }
     }
 }
-

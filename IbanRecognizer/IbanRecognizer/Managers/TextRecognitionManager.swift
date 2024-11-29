@@ -24,40 +24,37 @@ class TextRecognitionManager {
     private let requestHandler: VNSequenceRequestHandler // Reusable request handler for multiple frames
 
     private var recognizedTexts: [String] = []
-    
+
     init(recognitionLevel: VNRequestTextRecognitionLevel) {
         self.recognitionLevel = recognitionLevel
-        self.requestHandler = VNSequenceRequestHandler()
+        requestHandler = VNSequenceRequestHandler()
     }
-    
-    private func handleRecognitionResults(request: VNRequest, error: Error?) {
-            guard let results = request.results as? [VNRecognizedTextObservation] else {
-                print("No results or error: \(error?.localizedDescription ?? "Unknown error")")
-                return
-            }
 
-            let topCandidates = results.compactMap { observation in
-                observation.topCandidates(1).first?.string
-            }
+    private func handleRecognitionResults(request: VNRequest, error: Error?) {
+        guard let results = request.results as? [VNRecognizedTextObservation] else {
+            print("No results or error: \(error?.localizedDescription ?? "Unknown error")")
+            return
+        }
+
+        let topCandidates = results.compactMap { observation in
+            observation.topCandidates(1).first?.string
+        }
 
         print("Recognized texts: \(recognizedTexts)")
         recognizedTexts.append(contentsOf: topCandidates)
     }
-        
 }
 
 extension TextRecognitionManager: TextRecognition {
-    
     func recognizeText(in cgImage: CGImage) -> [String] {
-        
         recognizedTexts.removeAll()
-        
+
         do {
             try requestHandler.perform([textRecognitionRequest], on: cgImage)
         } catch {
             print("Error performing text recognition: \(error)")
         }
-        
+
         return recognizedTexts
     }
 }

@@ -352,7 +352,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					38C8AB042CE52C2F000EB4FA = {
 						CreatedOnToolsVersion = 14.2;
@@ -494,7 +494,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"${CONFIGURATION}\" == \"Debug\" ]]; then\n  echo \"execute swiftlint\"\n  \"${PODS_ROOT}/SwiftLint/swiftlint\"\nfi\n";
 		};
 		BBF10A4F2CF950B4001D8DCE /* swiftformat Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -512,7 +512,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftformat >/dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"${CONFIGURATION}\" == \"Debug\" ]]; then\n  echo \"execute swiftFormat\"\n  \"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"$SRCROOT\"\nfi\n";
 		};
 		FF0C74D772A73E66E11DAD51 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -803,7 +803,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6AF2D1DBA9B3329A793A9FF6 /* Pods-IbanRecognizerTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -824,7 +823,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A044186BD53B347AE9BD222C /* Pods-IbanRecognizerTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -845,7 +843,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5CD94295C49CFC8BEECBE590 /* Pods-IbanRecognizer-IbanRecognizerUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57DE82B8RS;
@@ -865,7 +862,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ACD7EFA825B33141F1154693 /* Pods-IbanRecognizer-IbanRecognizerUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57DE82B8RS;

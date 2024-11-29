@@ -7,39 +7,38 @@
 
 import AVFoundation
 import Combine
-import Vision
 import UIKit
+import Vision
 
 class ScannerViewModel: ObservableObject {
     private var frameCounter = 0
     private lazy var cameraManager = CameraManager()
     private let ibanValidatorManager: IBANValidator
     private let textRecognitionHandler: TextRecognitionManager
-    
+
     @Published var currentFrame: CGImage?
     @Published var cropedFrame: CGImage? {
         didSet {
             processCroppedFrame(cropedFrame)
         }
     }
+
     private let operationQueue = OperationQueue()
-    @Published  var recognizedIban: String? {
+    @Published var recognizedIban: String? {
         didSet {
             if recognizedIban != nil {
                 operationQueue.cancelAllOperations()
             }
         }
     }
-    
-    @Published  var validatedIban: String = ""
-    
+
+    @Published var validatedIban: String = ""
+
     init() {
         ibanValidatorManager = IBANValidatorManager()
         textRecognitionHandler = TextRecognitionManager(recognitionLevel: .accurate)
-
     }
-    
-    
+
     func handleCameraPreviews() async {
         for await image in cameraManager.previewStream {
             Task { @MainActor in
@@ -47,24 +46,23 @@ class ScannerViewModel: ObservableObject {
             }
         }
     }
-    
+
     func handleCameraPreviews() {
         cameraManager.startSession()
-         Task {
+        Task {
             await handleCameraPreviews()
         }
     }
-    
+
     func stopCameraPreviews() {
         cameraManager.stopSession()
     }
-    
 }
 
 extension ScannerViewModel {
     private func processCroppedFrame(_ cropedFrame: CGImage?) {
-        guard let image = cropedFrame else {return}
-        self.operationQueue.addOperation { [weak self] in
+        guard let image = cropedFrame else { return }
+        operationQueue.addOperation { [weak self] in
             let recognizedTexts = self?.recognizedTexts(image: image)
             if let recognizedTexts = recognizedTexts {
                 Task { @MainActor [weak self] in
@@ -76,7 +74,6 @@ extension ScannerViewModel {
 }
 
 extension ScannerViewModel {
-    
     func recognizedTexts(image: CGImage) -> [String] {
         frameCounter += 1
         guard frameCounter % 10 == 0 else {
@@ -93,15 +90,9 @@ extension ScannerViewModel {
     func recognizedIBAN(texts: [String]) -> String? {
         texts.first { ibanValidatorManager.validate(iban: $0) }
     }
-    
+
     func resetIban() {
         recognizedIban = nil
         validatedIban = ""
     }
 }
-
-
-
-
-
-

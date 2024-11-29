@@ -9,8 +9,8 @@ import SwiftUI
 
 struct IBANSheetView: View {
     var iban: String
-    var validate: () -> ()
-    var retry: () -> ()
+    var validate: () -> Void
+    var retry: () -> Void
     var body: some View {
         VStack {
             Text(L10n.ibanSheetViewTitle)
@@ -28,8 +28,5 @@ struct IBANSheetView: View {
                 GhostView(imageSystemName: nil, title: L10n.ibanSheetViewRetry)
             }
         }.presentationDetents([.medium])
-
     }
 }
-
-

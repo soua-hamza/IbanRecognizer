@@ -5,8 +5,8 @@
 //  Created by HAMZA on 15/11/2024.
 //
 
-import Foundation
 import AVFoundation
+import Foundation
 
 class CameraManager: NSObject {
     private let videoRotationAngle = 90.0
@@ -16,22 +16,19 @@ class CameraManager: NSObject {
     var captureSession = AVCaptureSession()
     var systemPreferredCamera = AVCaptureDevice.default(for: .video)
     var addToPreviewStream: ((CGImage) -> Void)?
-    
+
     override init() {
         super.init()
         configureSession()
     }
-    
-    lazy var previewStream: AsyncStream<CGImage> = {
-        AsyncStream { continuation in
-            addToPreviewStream = { cgImage in
-                continuation.yield(cgImage)
-            }
-        }
-    }()
-    
-    private func configureSession() {
 
+    lazy var previewStream: AsyncStream<CGImage> = AsyncStream { continuation in
+        addToPreviewStream = { cgImage in
+            continuation.yield(cgImage)
+        }
+    }
+
+    private func configureSession() {
         guard let systemPreferredCamera,
               let deviceInput = try? AVCaptureDeviceInput(device: systemPreferredCamera)
         else { return }
@@ -45,34 +42,34 @@ class CameraManager: NSObject {
             }
         }
         captureSession.beginConfiguration()
-        
+
         defer {
             self.captureSession.commitConfiguration()
         }
-        
+
         let videoOutput = AVCaptureVideoDataOutput()
         videoOutput.setSampleBufferDelegate(self, queue: captureSessionQueue)
-        
+
         guard captureSession.canAddInput(deviceInput) else {
             print("Cannot add device input to capture session.")
             return
         }
-        
+
         guard captureSession.canAddOutput(videoOutput) else {
             print("Cannot add video output to capture session.")
             return
         }
-        
+
         captureSession.addInput(deviceInput)
         captureSession.addOutput(videoOutput)
-        
     }
-    
+
     func startSession() {
         Task {
             captureSession.startRunning()
         }
     }
+
     func stopSession() {
         Task {
             captureSession.stopRunning()
@@ -81,13 +78,12 @@ class CameraManager: NSObject {
 }
 
 extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
-    
-    func captureOutput(_ output: AVCaptureOutput,
+    func captureOutput(_: AVCaptureOutput,
                        didOutput sampleBuffer: CMSampleBuffer,
-                       from connection: AVCaptureConnection) {
+                       from connection: AVCaptureConnection)
+    {
         connection.videoRotationAngle = videoRotationAngle
         guard let currentFrame = sampleBuffer.toCGImage else { return }
         addToPreviewStream?(currentFrame)
     }
-    
 }

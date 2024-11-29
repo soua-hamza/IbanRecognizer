@@ -5,19 +5,18 @@
 //  Created by HAMZA on 19/11/2024.
 //
 
-import XCTest
 @testable import IbanRecognizer
-final class ScannerViewTests: XCTestCase {
+import XCTest
 
+final class ScannerViewTests: XCTestCase {
     var scannerView: ScannerView!
     var scannerViewModelMock: ScannerViewModel!
-    
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         scannerViewModelMock = ScannerViewModel()
         scannerView = ScannerView()
         _ = scannerView.environmentObject(scannerViewModelMock)
-        
     }
 
     override func tearDownWithError() throws {
@@ -29,36 +28,36 @@ final class ScannerViewTests: XCTestCase {
     func test_cropImage_should_return_correct_croppedImage() {
         // Given
         let originalImage = UIImage(resource: .ibanScreen)
-        
+
         // When
         let croppedImage = scannerView.cropImage(inputImage: originalImage)
-        
+
         // Then
         XCTAssertNotNil(croppedImage)
     }
 
     func test_cropImage_should_return_Nil_for_invalidImage() {
-            // Given:
-            let invalidImage = UIImage() // Empty image
-            
-            // When:
-            let croppedImage = scannerView.cropImage(inputImage: invalidImage)
-            
-            // Then:
-            XCTAssertNil(croppedImage)
-        }
-    
+        // Given:
+        let invalidImage = UIImage() // Empty image
+
+        // When:
+        let croppedImage = scannerView.cropImage(inputImage: invalidImage)
+
+        // Then:
+        XCTAssertNil(croppedImage)
+    }
+
     func test_cropImage_correct_cropping_zone() {
         // Given:
         let originalImage = UIImage(resource: .screen)
         let imageViewScale = max(originalImage.size.width / UIScreen.main.bounds.width,
                                  originalImage.size.height / UIScreen.main.bounds.height)
         let expectedCropZone = CGRect(x: 0, y: 0, width: (UIScreen.main.bounds.width - 50) * imageViewScale, height: 60 * imageViewScale)
-        
+
         // When:
         if let croppedImage = scannerView.cropImage(inputImage: originalImage) {
             let actualRect = CGRect(x: 0, y: 0, width: croppedImage.width, height: croppedImage.height)
-            
+
             // Then:
             // SCREEN SHOT MADE WITH IPHONE SE, TEST WORK ONLY ON IPHONE SE
             XCTAssertEqual(expectedCropZone, actualRect)
@@ -66,12 +65,11 @@ final class ScannerViewTests: XCTestCase {
             XCTFail("Cropped image is nil")
         }
     }
-    
+
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

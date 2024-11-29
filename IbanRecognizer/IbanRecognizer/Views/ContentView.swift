@@ -20,25 +20,25 @@ struct ContentView: View {
         TabView {
             TabViewContent(text: L10n.accountViewText)
                 .tabItem {
-                    Image(systemName:"wallet.pass")
+                    Image(systemName: "wallet.pass")
                     Text(L10n.tabViewItem1)
                 }
 
             TransactionContentView()
                 .environmentObject(scannerViewModel)
                 .tabItem {
-                    Image(systemName:"rectangle.portrait.and.arrow.right.fill")
+                    Image(systemName: "rectangle.portrait.and.arrow.right.fill")
                     Text(L10n.tabViewItem2)
                 }
 
             TabViewContent(text: L10n.helpViewText)
                 .tabItem {
-                    Image(systemName:"questionmark.circle")
+                    Image(systemName: "questionmark.circle")
                     Text(L10n.tabViewItem3)
                 }
             TabViewContent(text: L10n.moreViewText)
                 .tabItem {
-                    Image(systemName:"ellipsis")
+                    Image(systemName: "ellipsis")
                     Text(L10n.tabViewItem4)
                 }
         }
