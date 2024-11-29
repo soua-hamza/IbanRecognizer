@@ -18,4 +18,3 @@ struct UnderlinedTextField: View {
             .background(.blue)
     }
 }
-

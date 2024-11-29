@@ -7,6 +7,8 @@ target 'IbanRecognizer' do
 
   # Pods for IbanRecognizer
   pod 'SwiftGen', '6.6.2'
+  pod 'SwiftLint', '0.57.1'
+  pod 'SwiftFormat/CLI', '0.55.3'
   
   target 'IbanRecognizerTests' do
     inherit! :search_paths
